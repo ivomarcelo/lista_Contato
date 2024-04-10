@@ -26,7 +26,7 @@ input[type="text"], input[type="submit"] {
 }
 .contact button {
   background-color: rgb(255, 0, 21);
-  color: rgb(116, 16, 33);
+  color: rgb(16, 116, 91);
   border: none;
   padding: 5px 10px;
   cursor: pointer;
