@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+form {
+  margin-bottom: 20px;
+ 
+}
+input[type="text"], input[type="submit"] {
+  padding: 8px;
+  margin-right: 10px;
+}
+#contacts {
+  list-style-type: none;
+  padding: 0;
+}
+.contact {
+  padding: 10px;
+  border-bottom: 1px solid #cc8112;
+  display: flex;
+  justify-content: space-between;
+}
+.contact button {
+  background-color: rgb(255, 0, 21);
+  color: rgb(116, 16, 33);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
