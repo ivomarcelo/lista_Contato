@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`Servidor está escutando na porta ${PORT}`);
 });
-/*
+
 //carregando Expreess -->
 const express = require('express');
 const app = express();
@@ -31,4 +31,4 @@ app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
 
-*/
+
