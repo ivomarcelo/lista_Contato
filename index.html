@@ -70,12 +70,13 @@ function deleteContact(index) {
 renderContacts();
 </script>
 <script>
+  //rodando o bloqueador de "alfanúmerico" campo telefone
   document.getElementById('phone').addEventListener('input', function (e) {
-      // Remove all non-numeric characters from the input value
+      //Remover todos os caracteres não numéricos do valor de entrada
       this.value = this.value.replace(/\D/g, '');
   });
   
-  // Optionally, you can add formatting for the phone number
+  // Opcionalmente, você pode adicionar formatação para o número de telefone
   document.getElementById('phone').addEventListener('input', function (e) {
       var x = this.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
       this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
