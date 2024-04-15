@@ -47,7 +47,7 @@ input[type="text"], input[type="submit"] {
   justify-content: space-between;
 }
 .contact button {
-  background-color: rgba(202, 121, 128, 0.717);
+  background-color: rgba(232, 238, 145, 0.705);
   color: rgb(16, 116, 91);
   border: none;
   padding: 5px 10px;
