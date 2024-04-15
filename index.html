@@ -8,13 +8,14 @@
     <script src="script.js"></script>
   </head>
 <body>
-    <h1>Catálogo de  Contatos</h1>
+    <h1>CATÁLOGOS DE CONTATOS</h1>
           
     <!-- campo de entrada de texto onde os usuários podem digitar o nome, telefone e email-->
     <form id="contactForm">
         <input type="text" id="name" placeholder="Nome" required >
         <input type="text" id="phone" placeholder="Telefone" required>
-        <input type="text" id="email" placeholder="email" required>
+        <!--<input type="text" id="email" placeholder="email" required>-->
+        <input type="email" id="email" name="email" required oninput="addAtSymbol()">
         <span id="emailError" class="error"></span><br><br>
         <input type="submit" value="Adicionar">
         <!--<input type="submit" value="Atualizar">
@@ -81,4 +82,12 @@ renderContacts();
       this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
   });
   </script>
-</html>
+  <script>
+    function addAtSymbol() {
+      var emailInput = document.getElementById('email');
+      if (!emailInput.value.includes('@')) {
+        emailInput.value += '@';
+      }
+    }
+    </script>
+ </html>

@@ -14,3 +14,5 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     document.getElementById("mailError").textContent = "";
   }
   });
+  
+  
