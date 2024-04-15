@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="script.js"></script>
 </head>
-
 <body>
     <h1>Catálogo de  Contatos</h1>
     <!-- campo de entrada de texto onde os usuários podem digitar o nome, telefone e email-->
     <form id="contactForm">
         <input type="text" id="name" placeholder="Nome" required>
         <input type="text" id="phone" placeholder="Telefone" required>
-        <input type="text" id="email" placeholder="Email" required>
+        <input type="text" id="email" placeholder="email" required>
+        <span id="emailError" class="error"></span><br><br>
         <input type="submit" value="Adicionar">
         <!--<input type="submit" value="Atualizar">
         <input type="submit" value="Buscar">-->
@@ -34,15 +33,12 @@ const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("email");
 const contactsList = document.getElementById("contacts");
-
 let contacts = [];
-
 contactForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const name = nameInput.value;
   const phone = phoneInput.value;
   const email = emailInput.value;
-
   if (name && phone && email) {
     const contact = { name, phone, email };
     contacts.push(contact);
@@ -70,7 +66,6 @@ function deleteContact(index) {
   contacts.splice(index, 1);
   renderContacts();
 }
-
 renderContacts();
 </script>
 <script>
@@ -79,8 +74,7 @@ renderContacts();
       //Remover todos os caracteres não numéricos do valor de entrada
       this.value = this.value.replace(/\D/g, '');
   });
-  
-  // Opcionalmente, você pode adicionar formatação para o número de telefone
+    // Opcionalmente, você pode adicionar formatação para o número de telefone
   document.getElementById('phone').addEventListener('input', function (e) {
       var x = this.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
       this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
