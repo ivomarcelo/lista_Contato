@@ -36,6 +36,10 @@ input[type="text"], input[type="submit"] {
   padding: 8px;
   margin-right: 10px;
 }
+input[type="email"], input[type="email"] {
+  padding: 8px;
+  margin-right: 10px;
+
 #contacts {
   list-style-type: none;
   padding: 0;
