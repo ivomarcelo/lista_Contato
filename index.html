@@ -8,7 +8,7 @@
     <script src="script.js"></script>
   </head>
 <body>
-    <h1>CATÁLOGOS DE CONTATOS</h1>
+    <h1>CATÁLOGO DE CONTATOS</h1>
           
     <!-- campo de entrada de texto onde os usuários podem digitar o nome, telefone e email-->
     <form id="contactForm">
@@ -34,6 +34,7 @@ const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("email");
 const contactsList = document.getElementById("contacts");
+// Array de objetos contendo informações de contato
 let contacts = [];
 contactForm.addEventListener("submit", function (event) {
   event.preventDefault();
